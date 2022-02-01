@@ -1,0 +1,225 @@
+/* UNIVERSAL SELECTORS */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ELEMENT SELECTORS: TO STYLE ALL INSTANCES OF AN ELEMENT. */
+/* Provides a colored background for body element. */
+body {
+  background-color: #d9dcd6;
+}
+/* Sets font size of all p tags to 16px */
+p {
+  font-size: 16px;
+}
+
+/* HEADER STYLING */
+
+/* Gives 20px of padding to the header, sets font family for header, applies a background color for the header, and changes the color of text in the header.*/
+header {
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #2a607c;
+  color: #ffffff;
+}
+
+/* Sets display type and font size for all h1 elements inside of header elements. */
+header h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+
+/* Sets text color for class="seo" inside of h1 elements that are inside of header elements.*/
+header h1 .seo {
+  color: #d9dcd6;
+}
+
+/* Gives 15px of padding-top, applies a margin-right of 20px, floats the nav to the right, sets font-family for nav, and applies a text size of 20px to all nav elements inside of header elements.*/
+header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+/* Sets the list style type to none for all unordered lists inside of navs that are inside of headers. */
+header nav ul {
+  list-style-type: none;
+}
+
+/* Sets display and margin-left to 25px for all list items in unordered lists that are inside of nav that is inside of header elements. */
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+/* MOVED anchor STYLING HERE TO GROUP WITH OTHER HEADER STYLINGS */
+/* Applies text color and sets text decoration to none for all anchors that have list items as a parent. The li must be inside of a ul which is inside of a nav, which is inside of a header element. */
+header nav ul li > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* FIGURE STYLING: STYLING FOR MAIN PHOTO FIGURE AND FIGCAPTION. */
+
+/* Creates a figure, sizes, and then positions it using margins. An URL image is displayed, then resized and positioned on the page.*/
+figure {
+  height: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/digital-marketing-meeting.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Provides an accessible way to know what is displayed. The display type is set to none so the text can be read by a screen reader, but doesn't affect the display of the page. */
+figcaption {
+  display: none;
+}
+
+/* SECTION STYLING */
+/* MOVED .content HERE TO BETTER FOLLOW HTML SEMANTIC STRUCTURE */
+
+/* Sets up size, display type, and positioning for class "content." */
+.content {
+  width: 75%;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* Targets img elements with class "float-left" (inside of 1st and 3rd articles) to float them to the left of the text. */
+.float-left {
+  float: left;
+  margin-right: 25px;
+}
+
+/* Targets img elements with class "float-right" (inside of 2nd article) to float it to the right of the text. */
+.float-right {
+  float: right;
+  margin-left: 25px;
+}
+
+/* CLASS SELECTORS: Targeting 1st article. */
+/* MOVED CLASS SELECTORS FOR SECTION TAG HERE TO BETTER FOLLOW HTML SEMANTIC STRUCTURE */
+
+/* Positions and sizes the 1st article. Then, sets font-family, background color, & text color for the 1st article.  */
+.search-engine-optimization {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #0072bb;
+  color: #ffffff;
+}
+
+/* Sets the maximum height of all img elements descended from class "search-engine-optimization" */
+.search-engine-optimization img {
+  max-height: 200px;
+}
+
+/* Sets a margin-bottom of 20px and a font size of 36px for all h2 elements descended from class "search-engine-optimization" */
+.search-engine-optimization h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+/* CLASS SELECTORS: Targeting 2nd article. */
+
+/* Positions and sizes the 2nd article. Then sets font-family, background color, & text color for the 2nd article. */
+.online-reputation-management {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #0072bb;
+  color: #ffffff;
+}
+
+/* Sets the maximum height of all img elements descended from id "online-reputation-management"  */
+.online-reputation-management img {
+  max-height: 200px;
+}
+
+/* Sets a margin-bottom of 20px and a font size of 36px for all h2 elements descended from class "online-reputation-management" */
+.online-reputation-management h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+/* CLASS SELECTORS: Targeting 3rd article. */
+
+/* Positions and sizes the 3rd article. Then sets font-family, background color, & text color for the 3rd article. */
+.social-media-marketing {
+  margin-bottom: 20px;
+  padding: 50px;
+  height: 300px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #0072bb;
+  color: #ffffff;
+}
+
+/* Sets the maximum height of all img elements descended from class "social-media-marketing" */
+.social-media-marketing img {
+  max-height: 200px;
+}
+
+/* Sets a margin-bottom of 20px and a font size of 36px for all h2 elements descended from class "social-media-marketing" */
+.social-media-marketing h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+/* ASIDE STYLING */
+/* Replaced class selectors with element selectors since the styling is the same for each div within the aside. This also reduces the amount of CSS required.*/
+
+/* Positions and sizes aside elements. The element will float to the right of its container and is pushed below right-floated elements. Then sets font-family and background color. */
+aside {
+  margin-right: 20px;
+  padding: 20px;
+  clear: both;
+  float: right;
+  width: 20%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #2589bd;
+}
+
+/* Sets margin-bottom for all divs descended from aside elements. This provides more space between the dispalyed content. Then sets text color to aforementiond divs. */
+aside div {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+/* Sets margin-bottom for all h3 that are descended from divs that are also descended from aside elements. */
+aside div h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Sets img tags descended from div elements that are descended from aside elements. to display as block elements. Then provides margins for positiioning and a maximum width value. */
+aside div img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+/* FOOTER STYLING */
+/* Replaced class selectors with element selectors since this is the only footer on the page. */
+
+/* Positions footer elements through padding and its clear value of both (which moves the element below both left and right floated elements). Then sets font-family and aligns text to the center. */
+footer {
+  padding: 30px;
+  clear: both;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+/* Sets font size to 20px for all h2 elements descended from footer elements. */
+footer h2 {
+  font-size: 20px;
+}
